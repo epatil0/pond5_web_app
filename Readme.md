@@ -33,4 +33,8 @@ This application can be run in either Docker or as a standalone python applicati
       ```bash
        python app.py
       ```
-
+  5. To execute unit tests run the command:
+    ```bash
+      pytest test_basic.py
+    ```  
+  
