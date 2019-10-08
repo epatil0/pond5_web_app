@@ -2,7 +2,7 @@ This application can be run in either Docker or as a standalone python applicati
 
 ## I. Run inside Docker
   1. Install [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-  2. Goto directory where there is dockerfile  
+  2. Goto directory containing dockerfile.
   3. To build the docker image execute command:
           ```bash
           docker build . -t <web_app_name>
@@ -20,14 +20,17 @@ This application can be run in either Docker or as a standalone python applicati
     3. http://0.0.0.0:8080/mediainfo/11497188 or other images present in pond5 website
 
 ## II. Run standalone 
-  1. Install [python](https://www.python.org/downloads/)
-  2.  ```bash
+  1.  Install [python](https://www.python.org/downloads/)
+  2.  Change the working directory to ###pond_web_service.
+      ```bash
         cd  pond_web_service
       ```  
-  3.  ```bash
+  3.  Install the required dependency.
+      ```bash
         pip install -r requirements.txt
        ```
-  4.  ```bash
+  4.  Execute following command to run the application. 
+      ```bash
        python app.py
       ```
 
