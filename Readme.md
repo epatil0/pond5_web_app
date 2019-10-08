@@ -21,7 +21,7 @@ This application can be run in either Docker or as a standalone python applicati
 
 ## II. Run standalone 
   1.  Install [python](https://www.python.org/downloads/)
-  2.  Change the working directory to ###pond_web_service.
+  2.  Change the working directory to **pond_web_service**.
       ```bash
         cd  pond_web_service
       ```  
