@@ -15,36 +15,44 @@ app = Flask(__name__)
 
 @app.route('/ping')
 def ping():
-    return jsonify("pong!!!")
-
+    try:
+        return jsonify("pong!!!")
+    except Exception as ex:
+        return "Page Error!!!!", 400
 
 @app.route('/system')
 def get_system_info():
-    context = dict()
-    context['version'] = platform.version()
-    context['plaform'] = platform.platform()
-    context['system'] = platform.system()
-    context['uname'] = platform.uname()
-    context['processor'] = platform.processor()
+    try:
+        context = dict()
+        context['version'] = platform.version()
+        context['plaform'] = platform.platform()
+        context['system'] = platform.system()
+        context['uname'] = platform.uname()
+        context['processor'] = platform.processor()
 
-    return jsonify(context)
-
+        return jsonify(context)
+    except Exception as ex:
+        return "Page Error!!!!", 400
 
 @app.route('/mediainfo/<image_id>', methods=['GET'])
 def get_media_info(image_id):
-
-    url = "https://www.pond5.com/photo/" + image_id
-    page = urllib2.urlopen(url)
-
-    page_data = BeautifulSoup(page)
-    context = dict()
-    context['title'] = page_data.img['alt']
-    context['file_name'] = page_data.img['src'].split("/")[-1]
-    return jsonify(context)
-
+    try:
+        url = "https://www.pond5.com/photo/" + image_id
+        page = urllib2.urlopen(url)
+    
+        page_data = BeautifulSoup(page)
+        context = dict()
+        context['title'] = page_data.img['alt']
+        context['file_name'] = page_data.img['src'].split("/")[-1]
+        return jsonify(context)
+    
+    except Exception as ex:
+        return "Page Error!!!!", 400
+        
 
 if __name__ =="__main__":
     app.run(host='0.0.0.0', debug=True, port=8080)
+
 
 
 
