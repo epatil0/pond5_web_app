@@ -2,7 +2,7 @@ This application can be run in either Docker or as a standalone python applicati
 
 ## I. Run inside Docker
   1. Install [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-  2. Goto directory containing dockerfile.
+  2. Goto directory containing Dockerfile.
   3. To build the docker image execute command.
      ```bash
           docker build . -t <web_app_name>
