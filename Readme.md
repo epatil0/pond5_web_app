@@ -13,11 +13,11 @@ This application can be run in either Docker or as a standalone python applicati
      ```        
   Access the following urls in the browser:
   
-    1. http://0.0.0.0:8080/ping
+    1. [http://0.0.0.0:8080/ping](http://0.0.0.0:8080/ping)
 
-    2. http://0.0.0.0:8080/system
+    2. [http://0.0.0.0:8080/system](http://0.0.0.0:8080/system)
  
-    3. http://0.0.0.0:8080/mediainfo/11497188 or other images present in pond5 website
+    3. [http://0.0.0.0:8080/mediainfo/11497188](http://0.0.0.0:8080/mediainfo/11497188) or other images present in pond5 website
 
 ## II. Run standalone 
   1.  Install [python](https://www.python.org/downloads/)
